@@ -40,7 +40,7 @@ params:
 
   label:
     text: "Home"
-    icon: /apple-touch-icon.png
+    # icon: /apple-touch-icon.png
     iconHeight: 35
 
   # # profile-mode
@@ -60,8 +60,11 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "Pepe Fagoaga"
+    Content: >
+      Sr. Security Engineer at [Prowler](https://prowler.com).
+
+      Views expressed on this blog are solely my own, not those of present or past employers.
 
   socialIcons:
     - name: x
@@ -87,21 +90,26 @@ params:
 
   # for search
   # https://fusejs.io/api/options.html
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    minMatchCharLength: 0
-    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
+  # fuseOpts:
+  #   isCaseSensitive: false
+  #   shouldSort: true
+  #   location: 0
+  #   distance: 1000
+  #   threshold: 0.4
+  #   minMatchCharLength: 0
+  #   limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+  #   keys: ["title", "permalink", "summary", "content"]
+
 menu:
   main:
     - identifier: tags
       name: tags
       url: /tags/
-      weight: 20
+      weight: 10
+    # - identifier: search
+    #   name: search
+    #   url: /search/
+    #   weight: 20
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
@@ -109,7 +117,7 @@ markup:
   highlight:
     noClasses: false
     # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
