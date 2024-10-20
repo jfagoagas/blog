@@ -75,7 +75,7 @@ To protect against CSRF attacks follow the best practices and recommendations at
 To prevent session hijacking:
 
 - Ensure that tokens can be revoked promptly in response to security events.
-- Implement a token revocation procedure automating it as much as possible based on th. Read more about it [here](#token-revocation).
+- Implement a token revocation procedure automating it as much as possible. Read more about it [here](#token-revocation).
 - Mimick traditional session expiration behavior. [Read more](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#session-expiration).
 - Use HTTPS (TLS) connections all the time.
 
