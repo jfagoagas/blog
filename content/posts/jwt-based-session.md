@@ -2,7 +2,7 @@
 title: "Secure JWT-based sessions"
 description: "Security practices for JWT-based sessions when there is no other choice"
 date: 2024-10-09T21:46:21+02:00
-draft: true
+draft: false
 showToc: true
 TocOpen: false
 tags: ["jwt", "web-security"]
