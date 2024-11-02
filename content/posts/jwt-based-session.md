@@ -10,9 +10,9 @@ UseHugoToc: true
 ---
 ## Introduction
 
-Configuring website authentication using JWT-based sessions isn't the most common approach. However, sometimes due to the architecture of your solution, you might find that there is no other choice. This is especially true when your frontend cannot maintain traditional sessions via cookies and must rely on the backend's ability to handle both authentication (AuthN) and authorization (AuthZ). In this post, we'll explore the challenges associated with JWT-based sessions and discuss ways to mitigate or solve them, focusing on token expiration and revocation and addressing web security vulnerabilities.
+While JWT-based sessions are not the typical choice for website authentication, sometimes due to your solution's architecture, you might find that there is no other choice. This is often the case when your frontend is unable to use traditional stateful sessions via cookies, requiring the backend to manage both authentication (AuthN) and authorization (AuthZ). In this post, we’ll dive into the unique challenges of using JWTs for session management, from handling token expiration and revocation to mitigating potential web security vulnerabilities. Along the way, we’ll explore strategies to make JWT-based sessions as secure and effective as possible.
 
-> **Warning:** There's a considerable debate about using traditional database sessions versus JWTs. Both strategies have downsides, and you should evaluate them based on your solution's requirements.
+> **Warning:** There's a considerable debate about using traditional stateful sessions versus JWTs. Both strategies have downsides, and you should evaluate them based on your solution's requirements.
 
 ## Understanding JWT, JWS, and JWE
 
@@ -38,7 +38,7 @@ It is mandatory to validate the expiration time on the server side to ensure tha
 
 ### Token Revocation
 
-When using JWT-based sessions is important to know that each token ID (`jti` claim) needs to be stored in the backend's data layer to allow revocation. Implementing a robust token revocation strategy is crucial for maintaining security. Here's how to handle it:
+When using JWT-based sessions is important to know that each token ID, `jti` claim, needs to be stored in the backend's data layer to allow revocation. Implementing a robust token revocation strategy is crucial for maintaining security. Here's how to handle it:
 
 The following actions should revoke a token:
 
@@ -83,4 +83,5 @@ To prevent session hijacking:
 
 ## Conclusion
 
-While using JWTs for session management isn't the standard practice, it's sometimes necessary due to architectural constraints. By focusing on token expiration, token revocation, and addressing web security vulnerabilities, you can securely manage user sessions and protect your application from common security threats.
+Using JWTs for session management may not be the standard approach, but it can be essential when architectural constraints demand it. By effectively managing token expiration and revocation, and proactively addressing web security vulnerabilities, you can maintain secure user sessions and protect your application from common security threats.
+
