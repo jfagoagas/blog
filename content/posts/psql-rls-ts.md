@@ -2,7 +2,7 @@
 title: "RLS and Full-Text Search - LEAKPROOF matters"
 description: "Postgre planner skips index use under RLS if operators aren't leakproof."
 date: 2024-12-01T10:00:00+02:00
-draft: true
+draft: false
 showToc: true
 TocOpen: false
 tags: ["postgres", "rls"]
