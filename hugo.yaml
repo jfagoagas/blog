@@ -75,10 +75,6 @@ params:
     - name: linkedin
       url: "https://linkedin.com/in/jfagoagas"
 
-  analytics:
-    google:
-      SiteVerificationTag: "G-9HHK98RVTT"
-
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
@@ -123,3 +119,12 @@ markup:
     guessSyntax: true
     lineNos: true
     style: monokai
+
+# Analytics
+analytics:
+  google:
+    SiteVerificationTag: "G-9HHK98RVTT"
+
+services:
+  googleAnalytics:
+    id: "G-9HHK98RVTT"
